@@ -447,6 +447,89 @@
   .nav-mobile a:hover, .nav-mobile a:focus { color: var(--accent); }
   .nav-mobile .nav-resume { color: var(--accent-light) !important; }
 
+  /* CAROUSEL */
+  .carousel-wrap { position: relative; }
+  .carousel-track {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1.25rem;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .carousel-slide {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    padding: 1.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    min-width: 0;
+  }
+  .carousel-quote {
+    font-family: 'DM Serif Display', serif;
+    font-size: 0.95rem;
+    font-style: italic;
+    color: var(--ink);
+    line-height: 1.65;
+    flex: 1;
+  }
+  .carousel-quote::before { content: ''; }
+  .carousel-quote::after { content: ''; }
+  .carousel-attr { display: flex; flex-direction: column; gap: 0.2rem; border-top: 1px solid var(--border); padding-top: 1rem; }
+  .carousel-name { font-family: 'DM Serif Display', serif; font-size: 0.95rem; color: var(--accent); }
+  .carousel-role { font-size: 0.75rem; color: var(--warm-gray); font-weight: 300; line-height: 1.4; }
+  .carousel-tag {
+    display: inline-block;
+    margin-top: 0.4rem;
+    font-size: 0.65rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent-light);
+    background: rgba(224, 123, 57, 0.08);
+    border: 1px solid rgba(224, 123, 57, 0.2);
+    padding: 0.2rem 0.5rem;
+    border-radius: 1px;
+    width: fit-content;
+  }
+  .carousel-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+  }
+  .carousel-btn {
+    background: transparent;
+    border: 1.5px solid var(--border);
+    color: var(--ink);
+    width: 40px; height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1rem;
+    display: flex; align-items: center; justify-content: center;
+    transition: all 0.2s;
+  }
+  .carousel-btn:hover { border-color: var(--accent-light); color: var(--accent-light); }
+  .carousel-dots { display: flex; gap: 0.5rem; }
+  .carousel-dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--border);
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+    padding: 0;
+  }
+  .carousel-dot.active { background: var(--accent-light); transform: scale(1.3); }
+
+  @media (max-width: 900px) {
+    .carousel-track { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 600px) {
+    .carousel-track { grid-template-columns: 1fr; }
+  }
+
   /* ANIMATIONS */
   @keyframes fadeUp {
     from { opacity: 0; transform: translateY(24px); }
@@ -496,6 +579,7 @@
     <li><a href="#about">About</a></li>
     <li><a href="#experience">Experience</a></li>
     <li><a href="#highlights">Highlights</a></li>
+    <li><a href="#testimonials">Testimonials</a></li>
     <li><a href="#skills">Skills</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="ericka-wright-resume.pdf" download class="nav-resume">Resume</a></li>
@@ -510,6 +594,7 @@
   <a href="#about">About</a>
   <a href="#experience">Experience</a>
   <a href="#highlights">Highlights</a>
+  <a href="#testimonials">Testimonials</a>
   <a href="#skills">Skills</a>
   <a href="#contact">Contact</a>
   <a href="ericka-wright-resume.pdf" download class="nav-resume">Resume</a>
@@ -568,12 +653,8 @@
     </div>
     <div style="display:flex; flex-direction:column; gap:1.5rem;">
       <div class="about-callout reveal">
-        <p>"Ericka has an impressive ability to understand technical details while never losing sight of the bigger strategic picture. Her ability to align technical, legal, and business stakeholders helped keep complex initiatives moving without losing momentum or clarity."</p>
-        <cite>— Brian Johnson, Sr. Director Analytics Development (External Consultant)</cite>
-      </div>
-      <div class="about-callout reveal">
-        <p>"Ericka has a very rare blend of technical knowledge, analytical mindset, business acumen, adtech expertise, cross-functional communication excellence and ability to lead across organizational boundaries."</p>
-        <cite>— Clara Lim, Leader of Paid Social, QuickBooks Acquisition</cite>
+        <p>"I really enjoyed working with Ericka Wright. She is the kind of cross-functional partner who makes complex work easier: thoughtful, organized, clear in her communication, and always focused on helping teams get to the right outcome. Ericka often sat at the intersection of marketing, advertising technology, analytics, privacy, and engineering. That is not an easy space to operate in, but she brought patience, curiosity, and strong judgment to every conversation. She was great at translating business needs into practical technical discussions, asking the right questions, and keeping people aligned without creating unnecessary noise. Beyond the work itself, Ericka is simply a wonderful person to collaborate with. She is warm, respectful, appreciative, and steady under pressure."</p>
+        <cite>— Simon Chong, Principal Software Developer · Intuit</cite>
       </div>
     </div>
   </div>
@@ -654,7 +735,7 @@
   </div>
 </section>
 
-<!-- HIGHLIGHTS -->
+<!-- SKILLS -->
 <section id="highlights" style="background: var(--dark-panel); padding: 7rem 8vw;">
   <p class="section-label reveal" style="color: var(--accent-light);">Highlights</p>
   <h2 class="section-heading reveal" style="color: #fff; max-width: 100%;">Initiatives that <em>moved the needle</em></h2>
@@ -691,6 +772,127 @@
       </p>
     </div>
 
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials" style="background: var(--section-bg); padding: 7rem 8vw;">
+  <p class="section-label reveal">What Others Say</p>
+  <h2 class="section-heading reveal">Trusted across <em>every team</em> I've touched</h2>
+  <p class="reveal" style="font-size: 1rem; color: var(--warm-gray); font-weight: 300; max-width: 680px; margin-bottom: 3rem; line-height: 1.75;">Feedback from a deliberately diverse group — senior leaders, engineers, data partners, paid media teams, and external consultants. The range of who vouches for this work reflects the nature of the work itself.</p>
+
+  <div class="carousel-wrap reveal">
+    <div class="carousel-track" id="carouselTrack">
+
+      <div class="carousel-slide">
+        <div class="carousel-quote">"Ericka has an impressive ability to understand technical details while never losing sight of the bigger strategic picture. Her ability to align technical, legal, and business stakeholders helped keep complex initiatives moving without losing momentum or clarity."</div>
+        <div class="carousel-attr">
+          <span class="carousel-name">Brian Johnson</span>
+          <span class="carousel-role">Sr. Director, Analytics Development · External Consultant</span>
+          <span class="carousel-tag">External Partner</span>
+        </div>
+      </div>
+
+      <div class="carousel-slide">
+        <div class="carousel-quote">"Ericka has a very rare blend of technical knowledge, analytical mindset, business acumen, adtech expertise, cross-functional communication excellence and ability to lead across organizational boundaries."</div>
+        <div class="carousel-attr">
+          <span class="carousel-name">Clara Lim</span>
+          <span class="carousel-role">Leader of Paid Social, QuickBooks Acquisition · Intuit</span>
+          <span class="carousel-tag">Advertiser / Paid Media</span>
+        </div>
+      </div>
+
+      <div class="carousel-slide">
+        <div class="carousel-quote">"Ericka's expertise in advertising measurement, marketing operations, and conversion signal infrastructure is deep, and she shares it freely. That's the behavior of someone who genuinely wants their cross-functional partners to succeed."</div>
+        <div class="carousel-attr">
+          <span class="carousel-name">Crystal Robinson-Pipersburgh</span>
+          <span class="carousel-role">Senior Engineering Development Manager · Intuit</span>
+          <span class="carousel-tag">Engineering Leadership</span>
+        </div>
+      </div>
+
+      <div class="carousel-slide">
+        <div class="carousel-quote">"She is my go-to person in marketing. Always available, flexible and helps to address initiatives and issues quickly. I learned how 3rd party marketing systems work from her. She is very creative in proposing resolutions. Customer obsessed. Helps engineering teams with an always-on smile."</div>
+        <div class="carousel-attr">
+          <span class="carousel-name">Ravi Pillala</span>
+          <span class="carousel-role">Distinguished Architect · Intuit</span>
+          <span class="carousel-tag">Engineer</span>
+        </div>
+      </div>
+
+      <div class="carousel-slide">
+        <div class="carousel-quote">"Her technical depth is uncommon for a Principal Marketing Ops role and makes her more effective in cross-functional delivery than most peers at that level. Ericka is a reliable partner who surfaces problems at the right time and to the right people — especially valuable in high-pressure launch moments."</div>
+        <div class="carousel-attr">
+          <span class="carousel-name">Nelson Diaz</span>
+          <span class="carousel-role">Principal Technical Program Manager · Intuit</span>
+          <span class="carousel-tag">TPM</span>
+        </div>
+      </div>
+
+      <div class="carousel-slide">
+        <div class="carousel-quote">"Ericka is the kind of peer who makes the broader org stronger — her energy, collaboration, and bias for action are assets that extend well beyond her immediate team."</div>
+        <div class="carousel-attr">
+          <span class="carousel-name">Tim Hecht</span>
+          <span class="carousel-role">Group Manager, Performance Media · Intuit</span>
+          <span class="carousel-tag">Senior Leader</span>
+        </div>
+      </div>
+
+      <div class="carousel-slide">
+        <div class="carousel-quote">"Ericka is exceptional. She is a deep expert in data architecture, privacy and signal structure in service of digital advertising strategies. She was the critical member to TurboTax GTM for these efforts which are the foundational aspects to our program. She is a star."</div>
+        <div class="carousel-attr">
+          <span class="carousel-name">Michael Stallone</span>
+          <span class="carousel-role">Director, Performance Media · Intuit</span>
+          <span class="carousel-tag">Senior Leader</span>
+        </div>
+      </div>
+
+      <div class="carousel-slide">
+        <div class="carousel-quote">"Ericka is a standout performer whose combination of autonomy, accountability, and communication skills makes her someone teams genuinely rely on. She is well-positioned to increase her impact and ensure her contributions are recognized at the level they deserve."</div>
+        <div class="carousel-attr">
+          <span class="carousel-name">Theo Constantouros</span>
+          <span class="carousel-role">Principal Technical Program Manager · Intuit</span>
+          <span class="carousel-tag">TPM</span>
+        </div>
+      </div>
+
+      <div class="carousel-slide">
+        <div class="carousel-quote">"Ericka often sat at the intersection of marketing, advertising technology, analytics, privacy, and engineering. That is not an easy space to operate in, but she brought patience, curiosity, and strong judgment to every conversation. She was great at translating business needs into practical technical discussions and keeping people aligned without creating unnecessary noise."</div>
+        <div class="carousel-attr">
+          <span class="carousel-name">Simon Chong</span>
+          <span class="carousel-role">Principal Software Developer · Intuit</span>
+          <span class="carousel-tag">Engineer</span>
+        </div>
+      </div>
+
+      <div class="carousel-slide">
+        <div class="carousel-quote">"Ericka has an impressive ability to understand technical details while never losing sight of the bigger strategic picture. Her ability to align technical, legal, and business stakeholders helped keep complex initiatives moving without losing momentum or clarity."</div>
+        <div class="carousel-attr">
+          <span class="carousel-name">Brian Johnson</span>
+          <span class="carousel-role">Sr. Director, Analytics Development · External Consultant</span>
+          <span class="carousel-tag">External Partner</span>
+        </div>
+      </div>
+
+      <div class="carousel-slide">
+        <div class="carousel-quote">"Ericka has a very rare blend of technical knowledge, analytical mindset, business acumen, adtech expertise, cross-functional communication excellence and ability to lead across organizational boundaries."</div>
+        <div class="carousel-attr">
+          <span class="carousel-name">Clara Lim</span>
+          <span class="carousel-role">Leader of Paid Social, QuickBooks Acquisition · Intuit</span>
+          <span class="carousel-tag">Advertiser / Paid Media</span>
+        </div>
+      </div>
+
+      <div class="carousel-slide">
+        <div class="carousel-quote">"Ericka was a trusted strategic technical partner with extensive expertise in the digital advertising space. Her proactive, no-nonsense approach had tremendous business impact, and she moved quickly, decisively toward resolution while ensuring collaboration with her legal and business team. She is a gem."</div>
+        <div class="carousel-attr">
+          <span class="carousel-name">Sherrie Kim Schiavetti</span>
+          <span class="carousel-role">Assistant General Counsel, Privacy · Intuit</span>
+          <span class="carousel-tag">Legal / Privacy</span>
+        </div>
+      </div>
+
+    </div>
   </div>
 </section>
 
@@ -902,7 +1104,6 @@
   }, { threshold: 0.1 });
   reveals.forEach(el => observer.observe(el));
 
-  // Hamburger menu
   const hamburger = document.querySelector('.nav-hamburger');
   const mobileNav = document.getElementById('mobile-nav');
   hamburger.addEventListener('click', () => {
