@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-KJSDFZNCSG"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-KJSDFZNCSG');
-</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TPCVSGP');</script>
+<!-- End Google Tag Manager -->
+
 <title>Ericka Wright — Ad Tech Implementation & Privacy Compliance Lead</title>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
 <style>
@@ -363,24 +363,7 @@
   /* FOOTER */
   footer { background: var(--dark-panel); color: rgba(255,255,255,0.35); text-align: center; padding: 2.5rem; font-size: 0.8rem; letter-spacing: 0.05em; }
 
-  .skill-tag-icon {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.4rem;
-    font-size: 0.82rem;
-    color: var(--ink);
-    background: var(--cream);
-    border: 1px solid var(--border);
-    padding: 0.3rem 0.8rem 0.3rem 0.5rem;
-    border-radius: 1px;
-    font-weight: 400;
-  }
-  .skill-tag-icon img {
-    width: 14px;
-    height: 14px;
-    object-fit: contain;
-    flex-shrink: 0;
-  }
+  /* SKIP LINK */
   .skip-link {
     position: absolute;
     top: -100px;
@@ -447,89 +430,6 @@
   .nav-mobile a:hover, .nav-mobile a:focus { color: var(--accent); }
   .nav-mobile .nav-resume { color: var(--accent-light) !important; }
 
-  /* CAROUSEL */
-  .carousel-wrap { position: relative; }
-  .carousel-track {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 1.25rem;
-    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  .carousel-slide {
-    background: var(--card-bg);
-    border: 1px solid var(--border);
-    border-radius: 2px;
-    padding: 1.75rem;
-    display: flex;
-    flex-direction: column;
-    gap: 1.25rem;
-    min-width: 0;
-  }
-  .carousel-quote {
-    font-family: 'DM Serif Display', serif;
-    font-size: 0.95rem;
-    font-style: italic;
-    color: var(--ink);
-    line-height: 1.65;
-    flex: 1;
-  }
-  .carousel-quote::before { content: ''; }
-  .carousel-quote::after { content: ''; }
-  .carousel-attr { display: flex; flex-direction: column; gap: 0.2rem; border-top: 1px solid var(--border); padding-top: 1rem; }
-  .carousel-name { font-family: 'DM Serif Display', serif; font-size: 0.95rem; color: var(--accent); }
-  .carousel-role { font-size: 0.75rem; color: var(--warm-gray); font-weight: 300; line-height: 1.4; }
-  .carousel-tag {
-    display: inline-block;
-    margin-top: 0.4rem;
-    font-size: 0.65rem;
-    font-weight: 500;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--accent-light);
-    background: rgba(224, 123, 57, 0.08);
-    border: 1px solid rgba(224, 123, 57, 0.2);
-    padding: 0.2rem 0.5rem;
-    border-radius: 1px;
-    width: fit-content;
-  }
-  .carousel-controls {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1.5rem;
-    margin-top: 1.5rem;
-  }
-  .carousel-btn {
-    background: transparent;
-    border: 1.5px solid var(--border);
-    color: var(--ink);
-    width: 40px; height: 40px;
-    border-radius: 50%;
-    cursor: pointer;
-    font-size: 1rem;
-    display: flex; align-items: center; justify-content: center;
-    transition: all 0.2s;
-  }
-  .carousel-btn:hover { border-color: var(--accent-light); color: var(--accent-light); }
-  .carousel-dots { display: flex; gap: 0.5rem; }
-  .carousel-dot {
-    width: 8px; height: 8px;
-    border-radius: 50%;
-    background: var(--border);
-    border: none;
-    cursor: pointer;
-    transition: background 0.2s, transform 0.2s;
-    padding: 0;
-  }
-  .carousel-dot.active { background: var(--accent-light); transform: scale(1.3); }
-
-  @media (max-width: 900px) {
-    .carousel-track { grid-template-columns: repeat(2, 1fr); }
-  }
-  @media (max-width: 600px) {
-    .carousel-track { grid-template-columns: 1fr; }
-  }
-
   /* ANIMATIONS */
   @keyframes fadeUp {
     from { opacity: 0; transform: translateY(24px); }
@@ -569,7 +469,10 @@
 </style>
 </head>
 <body>
-
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TPCVSGP"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 <a href="#main-content" class="skip-link">Skip to main content</a>
 
 <!-- NAV -->
@@ -579,7 +482,6 @@
     <li><a href="#about">About</a></li>
     <li><a href="#experience">Experience</a></li>
     <li><a href="#highlights">Highlights</a></li>
-    <li><a href="#testimonials">Testimonials</a></li>
     <li><a href="#skills">Skills</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="ericka-wright-resume.pdf" download class="nav-resume">Resume</a></li>
@@ -594,7 +496,6 @@
   <a href="#about">About</a>
   <a href="#experience">Experience</a>
   <a href="#highlights">Highlights</a>
-  <a href="#testimonials">Testimonials</a>
   <a href="#skills">Skills</a>
   <a href="#contact">Contact</a>
   <a href="ericka-wright-resume.pdf" download class="nav-resume">Resume</a>
@@ -653,8 +554,12 @@
     </div>
     <div style="display:flex; flex-direction:column; gap:1.5rem;">
       <div class="about-callout reveal">
-        <p>"I really enjoyed working with Ericka Wright. She is the kind of cross-functional partner who makes complex work easier: thoughtful, organized, clear in her communication, and always focused on helping teams get to the right outcome. Ericka often sat at the intersection of marketing, advertising technology, analytics, privacy, and engineering. That is not an easy space to operate in, but she brought patience, curiosity, and strong judgment to every conversation. She was great at translating business needs into practical technical discussions, asking the right questions, and keeping people aligned without creating unnecessary noise. Beyond the work itself, Ericka is simply a wonderful person to collaborate with. She is warm, respectful, appreciative, and steady under pressure."</p>
-        <cite>— Simon Chong, Principal Software Developer · Intuit</cite>
+        <p>"Ericka has an impressive ability to understand technical details while never losing sight of the bigger strategic picture. Her ability to align technical, legal, and business stakeholders helped keep complex initiatives moving without losing momentum or clarity."</p>
+        <cite>— Brian Johnson, Sr. Director Analytics Development (External Consultant)</cite>
+      </div>
+      <div class="about-callout reveal">
+        <p>"Ericka has a very rare blend of technical knowledge, analytical mindset, business acumen, adtech expertise, cross-functional communication excellence and ability to lead across organizational boundaries."</p>
+        <cite>— Clara Lim, Leader of Paid Social, QuickBooks Acquisition</cite>
       </div>
     </div>
   </div>
@@ -735,7 +640,7 @@
   </div>
 </section>
 
-<!-- SKILLS -->
+<!-- HIGHLIGHTS -->
 <section id="highlights" style="background: var(--dark-panel); padding: 7rem 8vw;">
   <p class="section-label reveal" style="color: var(--accent-light);">Highlights</p>
   <h2 class="section-heading reveal" style="color: #fff; max-width: 100%;">Initiatives that <em>moved the needle</em></h2>
@@ -772,109 +677,6 @@
       </p>
     </div>
 
-  </div>
-</section>
-
-<!-- TESTIMONIALS -->
-<section id="testimonials" style="background: var(--section-bg); padding: 7rem 8vw;">
-  <p class="section-label reveal">What Others Say</p>
-  <h2 class="section-heading reveal">Trusted across <em>every team</em></h2>
-  <p class="reveal" style="font-size: 1rem; color: var(--warm-gray); font-weight: 300; max-width: 680px; margin-bottom: 3rem; line-height: 1.75;">Feedback from a deliberately diverse group — senior leaders, engineers, data partners, paid media teams, and external consultants. The range of who vouches for this work reflects the nature of the work itself.</p>
-
-  <div class="carousel-wrap reveal">
-    <div class="carousel-track" id="carouselTrack">
-
-      <div class="carousel-slide">
-        <div class="carousel-quote">"Ericka has an impressive ability to understand technical details while never losing sight of the bigger strategic picture. Her ability to align technical, legal, and business stakeholders helped keep complex initiatives moving without losing momentum or clarity."</div>
-        <div class="carousel-attr">
-          <span class="carousel-name">Brian Johnson</span>
-          <span class="carousel-role">Sr. Director, Analytics Development · External Consultant</span>
-          <span class="carousel-tag">External Partner</span>
-        </div>
-      </div>
-
-      <div class="carousel-slide">
-        <div class="carousel-quote">"Ericka often sat at the intersection of marketing, advertising technology, analytics, privacy, and engineering. That is not an easy space to operate in, but she brought patience, curiosity, and strong judgment to every conversation. She was great at translating business needs into practical technical discussions and keeping people aligned without creating unnecessary noise."</div>
-        <div class="carousel-attr">
-          <span class="carousel-name">Simon Chong</span>
-          <span class="carousel-role">Principal Software Developer · Intuit</span>
-          <span class="carousel-tag">Engineer</span>
-        </div>
-      </div>
-
-      <div class="carousel-slide">
-        <div class="carousel-quote">"Ericka is a standout performer whose combination of autonomy, accountability, and communication skills makes her someone teams genuinely rely on. She is well-positioned to increase her impact and ensure her contributions are recognized at the level they deserve."</div>
-        <div class="carousel-attr">
-          <span class="carousel-name">Theo Constantouros</span>
-          <span class="carousel-role">Principal Technical Program Manager · Intuit</span>
-          <span class="carousel-tag">TPM</span>
-        </div>
-      </div>
-
-      <div class="carousel-slide">
-        <div class="carousel-quote">"Her technical depth is uncommon for a Principal Marketing Ops role and makes her more effective in cross-functional delivery than most peers at that level. Ericka is a reliable partner who surfaces problems at the right time and to the right people — especially valuable in high-pressure launch moments."</div>
-        <div class="carousel-attr">
-          <span class="carousel-name">Nelson Diaz</span>
-          <span class="carousel-role">Principal Technical Program Manager · Intuit</span>
-          <span class="carousel-tag">TPM</span>
-        </div>
-      </div>
-
-      <div class="carousel-slide">
-        <div class="carousel-quote">"Ericka is the kind of peer who makes the broader org stronger — her energy, collaboration, and bias for action are assets that extend well beyond her immediate team."</div>
-        <div class="carousel-attr">
-          <span class="carousel-name">Tim Hecht</span>
-          <span class="carousel-role">Group Manager, Performance Media · Intuit</span>
-          <span class="carousel-tag">Peer</span>
-        </div>
-      </div>
-
-      <div class="carousel-slide">
-        <div class="carousel-quote">"Ericka has a very rare blend of technical knowledge, analytical mindset, business acumen, adtech expertise, cross-functional communication excellence and ability to lead across organizational boundaries."</div>
-        <div class="carousel-attr">
-          <span class="carousel-name">Clara Lim</span>
-          <span class="carousel-role">Leader of Paid Social, QuickBooks Acquisition · Intuit</span>
-          <span class="carousel-tag">Advertiser / Paid Media</span>
-        </div>
-      </div>
-
-      <div class="carousel-slide">
-        <div class="carousel-quote">"She is my go-to person in marketing. Always available, flexible and helps to address initiatives and issues quickly. I learned how 3rd party marketing systems work from her. She is very creative in proposing resolutions. Customer obsessed. Helps engineering teams with an always-on smile."</div>
-        <div class="carousel-attr">
-          <span class="carousel-name">Ravi Pillala</span>
-          <span class="carousel-role">Distinguished Architect · Intuit</span>
-          <span class="carousel-tag">Engineer</span>
-        </div>
-      </div>
-
-      <div class="carousel-slide">
-        <div class="carousel-quote">"Ericka's expertise in advertising measurement, marketing operations, and conversion signal infrastructure is deep, and she shares it freely. That's the behavior of someone who genuinely wants their cross-functional partners to succeed."</div>
-        <div class="carousel-attr">
-          <span class="carousel-name">Crystal Robinson-Pipersburgh</span>
-          <span class="carousel-role">Senior Data Engineering Development Manager · Intuit</span>
-          <span class="carousel-tag">Engineering Leadership</span>
-        </div>
-      </div>
-
-      <div class="carousel-slide">
-        <div class="carousel-quote">"Ericka was a trusted strategic technical partner with extensive expertise in the digital advertising space. Her proactive, no-nonsense approach had tremendous business impact, and she moved quickly, decisively toward resolution while ensuring collaboration with her legal and business team. She is a gem."</div>
-        <div class="carousel-attr">
-          <span class="carousel-name">Sherrie Kim Schiavetti</span>
-          <span class="carousel-role">Assistant General Counsel, Privacy · Intuit</span>
-          <span class="carousel-tag">Legal / Privacy</span>
-        </div>
-      </div>
-
-      <div class="carousel-slide">
-        <div class="carousel-quote">"Ericka is exceptional. She is a deep expert in data architecture, privacy and signal structure in service of digital advertising strategies. She was the critical member to TurboTax GTM for these efforts which are the foundational aspects to our program. She is a star."</div>
-        <div class="carousel-attr">
-          <span class="carousel-name">Michael Stallone</span>
-          <span class="carousel-role">Director, Performance Media · Intuit</span>
-          <span class="carousel-tag">Senior Leader</span>
-        </div>
-      </div>
-
-    </div>
   </div>
 </section>
 
@@ -963,36 +765,36 @@
     <div class="skill-card full reveal">
       <div class="skill-category">Vendors</div>
       <div class="skill-items">
-        <span class="skill-tag-icon"><img src="https://www.google.com/s2/favicons?domain=adobe.com&sz=32" alt="" aria-hidden="true">Adobe Audience Manager</span>
-        <span class="skill-tag-icon"><img src="https://www.google.com/s2/favicons?domain=google.com&sz=32" alt="" aria-hidden="true">Google Ads Conversion Tracking &amp; Remarketing (gtag.js)</span>
-        <span class="skill-tag-icon"><img src="https://www.google.com/s2/favicons?domain=google.com&sz=32" alt="" aria-hidden="true">Google Consent Mode</span>
-        <span class="skill-tag-icon"><img src="https://www.google.com/s2/favicons?domain=google.com&sz=32" alt="" aria-hidden="true">Floodlight (gtag.js)</span>
-        <span class="skill-tag-icon"><img src="https://www.google.com/s2/favicons?domain=facebook.com&sz=32" alt="" aria-hidden="true">Facebook Pixel</span>
-        <span class="skill-tag-icon"><img src="https://www.google.com/s2/favicons?domain=tiktok.com&sz=32" alt="" aria-hidden="true">TikTok Pixel</span>
-        <span class="skill-tag-icon"><img src="https://www.google.com/s2/favicons?domain=snapchat.com&sz=32" alt="" aria-hidden="true">Snap Pixel</span>
-        <span class="skill-tag-icon"><img src="https://www.google.com/s2/favicons?domain=twitter.com&sz=32" alt="" aria-hidden="true">Twitter Universal Website Tag</span>
-        <span class="skill-tag-icon"><img src="https://www.google.com/s2/favicons?domain=pinterest.com&sz=32" alt="" aria-hidden="true">Pinterest Tag</span>
-        <span class="skill-tag-icon"><img src="https://www.google.com/s2/favicons?domain=linkedin.com&sz=32" alt="" aria-hidden="true">LinkedIn Insight Tag</span>
-        <span class="skill-tag-icon"><img src="https://www.google.com/s2/favicons?domain=cj.com&sz=32" alt="" aria-hidden="true">CJ Affiliate Universal Tag</span>
-        <span class="skill-tag-icon"><img src="https://www.google.com/s2/favicons?domain=amazon.com&sz=32" alt="" aria-hidden="true">Amazon Advertising</span>
-        <span class="skill-tag-icon"><img src="https://www.google.com/s2/favicons?domain=thetradedesk.com&sz=32" alt="" aria-hidden="true">The Trade Desk Universal Pixel</span>
-        <span class="skill-tag-icon"><img src="https://www.google.com/s2/favicons?domain=microsoft.com&sz=32" alt="" aria-hidden="true">Bing Ads UET</span>
-        <span class="skill-tag-icon"><img src="https://www.google.com/s2/favicons?domain=taboola.com&sz=32" alt="" aria-hidden="true">Taboola Pixel</span>
-        <span class="skill-tag-icon"><img src="https://www.google.com/s2/favicons?domain=outbrain.com&sz=32" alt="" aria-hidden="true">Outbrain Pixel</span>
-        <span class="skill-tag-icon"><img src="https://www.google.com/s2/favicons?domain=yahoo.com&sz=32" alt="" aria-hidden="true">Yahoo Dot</span>
-        <span class="skill-tag-icon"><img src="https://www.google.com/s2/favicons?domain=admarketplace.com&sz=32" alt="" aria-hidden="true">AdMarketplace</span>
-        <span class="skill-tag-icon"><img src="https://www.google.com/s2/favicons?domain=qualtrics.com&sz=32" alt="" aria-hidden="true">Qualtrics Site Intercept</span>
-        <span class="skill-tag-icon"><img src="https://www.google.com/s2/favicons?domain=siteimprove.com&sz=32" alt="" aria-hidden="true">Siteimprove</span>
-        <span class="skill-tag-icon"><img src="https://www.google.com/s2/favicons?domain=crazyegg.com&sz=32" alt="" aria-hidden="true">CrazyEgg</span>
-        <span class="skill-tag-icon"><img src="https://www.google.com/s2/favicons?domain=optimizely.com&sz=32" alt="" aria-hidden="true">Optimizely Web Experimentation</span>
-        <span class="skill-tag-icon"><img src="https://www.google.com/s2/favicons?domain=ispot.tv&sz=32" alt="" aria-hidden="true">iSpot.tv Pixel</span>
-        <span class="skill-tag-icon"><img src="https://www.google.com/s2/favicons?domain=innovid.com&sz=32" alt="" aria-hidden="true">InnovidXP</span>
-        <span class="skill-tag-icon"><img src="https://www.google.com/s2/favicons?domain=tvsquared.com&sz=32" alt="" aria-hidden="true">TVSquared</span>
-        <span class="skill-tag-icon"><img src="https://www.google.com/s2/favicons?domain=bazaarvoice.com&sz=32" alt="" aria-hidden="true">Bazaarvoice Pixel</span>
-        <span class="skill-tag-icon"><img src="https://www.google.com/s2/favicons?domain=kochava.com&sz=32" alt="" aria-hidden="true">Kochava Web SDK</span>
-        <span class="skill-tag-icon"><img src="https://www.google.com/s2/favicons?domain=mparticle.com&sz=32" alt="" aria-hidden="true">mParticle by Rokt</span>
-        <span class="skill-tag-icon"><img src="https://www.google.com/s2/favicons?domain=braze.com&sz=32" alt="" aria-hidden="true">Braze Web SDK</span>
-        <span class="skill-tag-icon"><img src="https://www.google.com/s2/favicons?domain=movableink.com&sz=32" alt="" aria-hidden="true">Movable Ink</span>
+        <span class="skill-tag">Adobe Audience Manager</span>
+        <span class="skill-tag">Google Ads Conversion Tracking &amp; Remarketing (gtag.js)</span>
+        <span class="skill-tag">Google Consent Mode</span>
+        <span class="skill-tag">Floodlight (gtag.js)</span>
+        <span class="skill-tag">Facebook Pixel</span>
+        <span class="skill-tag">TikTok Pixel</span>
+        <span class="skill-tag">Snap Pixel</span>
+        <span class="skill-tag">Twitter Universal Website Tag</span>
+        <span class="skill-tag">Pinterest Tag</span>
+        <span class="skill-tag">LinkedIn Insight Tag</span>
+        <span class="skill-tag">CJ Affiliate Universal Tag</span>
+        <span class="skill-tag">Amazon Advertising</span>
+        <span class="skill-tag">The Trade Desk Universal Pixel</span>
+        <span class="skill-tag">Bing Ads UET</span>
+        <span class="skill-tag">Taboola Pixel</span>
+        <span class="skill-tag">Outbrain Pixel</span>
+        <span class="skill-tag">Yahoo Dot</span>
+        <span class="skill-tag">AdMarketplace</span>
+        <span class="skill-tag">Qualtrics Site Intercept</span>
+        <span class="skill-tag">Siteimprove</span>
+        <span class="skill-tag">CrazyEgg</span>
+        <span class="skill-tag">Optimizely Web Experimentation</span>
+        <span class="skill-tag">iSpot.tv Pixel</span>
+        <span class="skill-tag">InnovidXP</span>
+        <span class="skill-tag">TVSquared</span>
+        <span class="skill-tag">Bazaarvoice Pixel</span>
+        <span class="skill-tag">Kochava Web SDK</span>
+        <span class="skill-tag">mParticle by Rokt</span>
+        <span class="skill-tag">Braze Web SDK</span>
+        <span class="skill-tag">Movable Ink</span>
       </div>
     </div>
 
@@ -1086,6 +888,7 @@
   }, { threshold: 0.1 });
   reveals.forEach(el => observer.observe(el));
 
+  // Hamburger menu
   const hamburger = document.querySelector('.nav-hamburger');
   const mobileNav = document.getElementById('mobile-nav');
   hamburger.addEventListener('click', () => {
