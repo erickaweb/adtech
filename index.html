@@ -3,6 +3,19 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!-- dataLayer init — must be BEFORE GTM snippet -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+</script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'pageType'     : 'portfolio',   // page description
+    'pageCategory' : 'adtech',     // section of your site
+    'userStatus'   : 'anonymous',   // or 'returning' if you track that
+    'siteVersion'  : '1.0'
+  });
+</script>
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -581,13 +594,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <nav aria-label="Main navigation">
   <a class="nav-name" href="#">Ericka Wright</a>
   <ul class="nav-links" role="list">
-    <li><a href="#about">About</a></li>
-    <li><a href="#experience">Experience</a></li>
-    <li><a href="#highlights">Highlights</a></li>
-    <li><a href="#testimonials">Testimonials</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="ericka-wright-resume.pdf" download class="nav-resume">Resume</a></li>
+    <li><a href="#about" id="lnk-about">About</a></li>
+    <li><a href="#experience" id="lnk-experience">Experience</a></li>
+    <li><a href="#highlights" id="lnk-highlights">Highlights</a></li>
+    <li><a href="#testimonials" id="lnk-testimonials">Testimonials</a></li>
+    <li><a href="#skills" id="lnk-skills">Skills</a></li>
+    <li><a href="#contact" id="lnk-contact">Contact</a></li>
+    <li><a href="ericka-wright-resume.pdf" download class="nav-resume" id="lnk-resume">Resume</a></li>
   </ul>
   <button class="nav-hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-nav">
     <span></span><span></span><span></span>
@@ -596,13 +609,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <!-- MOBILE NAV -->
 <div id="mobile-nav" class="nav-mobile" role="navigation" aria-label="Mobile navigation">
-  <a href="#about">About</a>
-  <a href="#experience">Experience</a>
-  <a href="#highlights">Highlights</a>
-  <a href="#testimonials">Testimonials</a>
-  <a href="#skills">Skills</a>
-  <a href="#contact">Contact</a>
-  <a href="ericka-wright-resume.pdf" download class="nav-resume">Resume</a>
+  <a href="#about" id="lnk-about">About</a>
+  <a href="#experience" id="lnk-experience">Experience</a>
+  <a href="#highlights" id="lnk-highlights">Highlights</a>
+  <a href="#testimonials" id="lnk-testimonials">Testimonials</a>
+  <a href="#skills" id="lnk-skills">Skills</a>
+  <a href="#contact" id="lnk-contact">Contact</a>
+  <a href="ericka-wright-resume.pdf" download class="nav-resume" id="lnk-resume">Resume</a>
 </div>
 
 <main id="main-content">
@@ -614,9 +627,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <h1 class="hero-name"><span class="first">Ericka</span><br><em>Wright</em></h1>
     <p class="hero-title">I implement the ad tech stack for brands across web and mobile — connecting privacy, engineering, analytics, and advertising channels into a compliant, measurable foundation.</p>
     <div class="hero-cta">
-      <a href="#contact" class="btn btn-primary">Get in Touch</a>
-      <a href="#experience" class="btn btn-outline">View My Work</a>
-      <a href="ericka-wright-resume.pdf" download class="btn btn-outline">Download Resume</a>
+      <a href="#contact" class="btn btn-primary" id="btn-get-in-touch">Get in Touch</a>
+      <a href="#experience" class="btn btn-outline" id="btn-view-my-work">View My Work</a>
+      <a href="ericka-wright-resume.pdf" download class="btn btn-outline" id="btn-download-resume">Download Resume</a>
     </div>
   </div>
   <div class="hero-right">
@@ -1107,6 +1120,98 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       hamburger.setAttribute('aria-expanded', false);
     });
   });
+</script>
+<script>
+  // Get In Touch button click
+  document.getElementById("btn-get-in-touch").addEventListener("click", function() {
+    window.dataLayer.push({
+      'event'       : 'cta_click',
+      'button_text' : 'Get In Touch',
+      'page_type'   : 'portfolio'
+    });
+  });
+
+  // View My Work button click
+  document.getElementById("btn-view-my-work").addEventListener("click", function() {
+    window.dataLayer.push({
+      'event'      : 'cta_click',
+      'button_text' : "View My Work",
+      'page_type'  : 'portfolio'
+    });
+  });
+
+  // Download Resume button click
+  document.getElementById("btn-download-resume").addEventListener("click", function() {
+    window.dataLayer.push({
+      'event'      : 'cta_click',
+      'button_text' : "Download Resume",
+      'page_type'  : 'portfolio'
+    });
+  });
+
+  // About link click
+  document.getElementById("lnk-about").addEventListener("click", function() {
+    window.dataLayer.push({
+      'event'      : 'link_click',
+      'link_text'  : "About",
+      'page_type'  : 'portfolio'
+    });
+  });
+  
+  // Experience link click
+  document.getElementById("lnk-experience").addEventListener("click", function() {
+    window.dataLayer.push({
+      'event'      : 'link_click',
+      'link_text'  : "Experience",
+      'page_type'  : 'portfolio'
+    });
+  });
+
+  // Highlights link click
+  document.getElementById("lnk-highlights").addEventListener("click", function() {
+    window.dataLayer.push({
+      'event'      : 'link_click',
+      'link_text'  : "Highlights",
+      'page_type'  : 'portfolio'
+    });
+  });
+
+  // Testimonials link click
+  document.getElementById("lnk-testimonials").addEventListener("click", function() {
+    window.dataLayer.push({
+      'event'      : 'link_click',
+      'link_text'  : "Testimonials",
+      'page_type'  : 'portfolio'
+    });
+  });
+
+  // Skills link click
+  document.getElementById("lnk-skills").addEventListener("click", function() {
+    window.dataLayer.push({
+      'event'      : 'link_click',
+      'link_text'  : "Skills",
+      'page_type'  : 'portfolio'
+    });
+  });
+
+  // Contact link click
+  document.getElementById("lnk-contact").addEventListener("click", function() {
+    window.dataLayer.push({
+      'event'      : 'link_click',
+      'link_text'  : "Contact",
+      'page_type'  : 'portfolio'
+    });
+  });
+
+  // Resume link click
+  document.getElementById("lnk-resume").addEventListener("click", function() {
+    window.dataLayer.push({
+      'event'      : 'link_click',
+      'link_text'  : "Resume",
+      'page_type'  : 'portfolio'
+    });
+  });
+
 </script>
 </body>
 </html>
